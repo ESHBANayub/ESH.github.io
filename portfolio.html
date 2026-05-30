@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Virtual Assistant & Order Fulfillment Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1b2a;
+    --navy-mid: #1a2e45;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --cream: #f5f0e8;
+    --white: #ffffff;
+    --gray: #8a9ab0;
+    --light-bg: #f9f7f4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--light-bg);
+    color: var(--navy);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(13,27,42,0.97);
+    backdrop-filter: blur(12px);
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    padding: 120px 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-content {
+    max-width: 700px;
+    animation: fadeUp 0.9s ease both;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(201,168,76,0.12);
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 72px);
+    color: var(--white);
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .hero h1 span {
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 18px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 300;
+    margin-bottom: 32px;
+    line-height: 1.6;
+    max-width: 540px;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 44px;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 14px 32px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.8);
+    padding: 14px 32px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: border-color 0.3s, color 0.3s;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* STATS BAR */
+  .stats-bar {
+    background: var(--navy-mid);
+    border-top: 1px solid rgba(201,168,76,0.15);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    padding: 32px 60px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+  }
+
+  .stat-item {
+    text-align: center;
+    animation: fadeUp 0.9s ease 0.3s both;
+  }
+
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: var(--gold);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 90px 60px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 42px);
+    color: var(--navy);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .section-desc {
+    font-size: 15px;
+    color: #5a6a7a;
+    max-width: 520px;
+    line-height: 1.8;
+    margin-bottom: 56px;
+  }
+
+  /* SERVICES */
+  .services { background: var(--white); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+    background: #e8e4de;
+    border: 2px solid #e8e4de;
+  }
+
+  .service-card {
+    background: var(--white);
+    padding: 40px 36px;
+    transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 0;
+    background: var(--gold);
+    transition: height 0.4s ease;
+  }
+
+  .service-card:hover::before { height: 100%; }
+  .service-card:hover { background: #fdfcfa; }
+
+  .service-icon {
+    width: 44px; height: 44px;
+    background: rgba(201,168,76,0.1);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--navy);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    color: #5a6a7a;
+    line-height: 1.7;
+  }
+
+  /* SKILLS */
+  .skills-section { background: var(--light-bg); }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .skill-item {
+    background: var(--white);
+    padding: 20px 24px;
+    border-left: 3px solid var(--gold);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .skill-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .skill-bar {
+    height: 3px;
+    background: #e8e4de;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .skill-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    border-radius: 2px;
+    animation: fillBar 1.2s ease both;
+  }
+
+  /* TOOLS */
+  .tools-section { background: var(--navy); }
+  .tools-section .section-title { color: var(--white); }
+  .tools-section .section-desc { color: rgba(255,255,255,0.5); }
+  .tools-section .section-label { color: var(--gold); }
+
+  .tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .tool-tag {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,168,76,0.2);
+    color: rgba(255,255,255,0.8);
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 400;
+    border-radius: 2px;
+    letter-spacing: 0.3px;
+    transition: border-color 0.3s, color 0.3s;
+  }
+
+  .tool-tag:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  /* WHY ME */
+  .why-section { background: var(--cream); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+  }
+
+  .why-card {
+    padding: 32px;
+    background: var(--white);
+    border-bottom: 3px solid var(--gold);
+  }
+
+  .why-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: rgba(201,168,76,0.2);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .why-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .why-card p {
+    font-size: 14px;
+    color: #5a6a7a;
+    line-height: 1.7;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: var(--navy);
+    text-align: center;
+  }
+
+  .contact-section .section-title { color: var(--white); }
+  .contact-section .section-label { color: var(--gold); }
+
+  .contact-desc {
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    max-width: 480px;
+    margin: 0 auto 44px;
+    line-height: 1.8;
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,168,76,0.25);
+    color: rgba(255,255,255,0.75);
+    padding: 14px 28px;
+    font-size: 13px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.3s;
+    letter-spacing: 0.5px;
+  }
+
+  .contact-link:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(201,168,76,0.06);
+  }
+
+  /* FOOTER */
+  footer {
+    background: #080f18;
+    padding: 24px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-top: 1px solid rgba(201,168,76,0.1);
+  }
+
+  footer span {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.5px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fillBar {
+    from { width: 0; }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 24px 60px; }
+    section { padding: 60px 24px; }
+    .stats-bar { padding: 28px 24px; gap: 40px; }
+    footer { padding: 20px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">YourName</div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Available for Hire · Remote</div>
+    <h1>Virtual Assistant &<br><span>Order Fulfillment</span><br>Specialist</h1>
+    <p class="hero-sub">Reliable. Accurate. Process-driven.</p>
+    <p class="hero-desc">I help e-commerce businesses run smoothly — from order tracking and supplier coordination to data management and backend operations. I follow your SOPs, keep your records clean, and make sure nothing slips through the cracks.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">Hire Me</a>
+      <a href="#services" class="btn-outline">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-number">3+</div>
+    <div class="stat-label">Years Experience</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">100%</div>
+    <div class="stat-label">SOP Compliant</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">E-com</div>
+    <div class="stat-label">Industry Focus</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">Remote</div>
+    <div class="stat-label">Work Setup</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-label">What I Do</div>
+  <h2 class="section-title">Core Services</h2>
+  <p class="section-desc">End-to-end operational support for e-commerce stores and online businesses.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">📦</div>
+      <h3>Order Fulfillment</h3>
+      <p>Processing orders, tracking shipments, updating statuses, and ensuring every order is fulfilled accurately and on time.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🤝</div>
+      <h3>Supplier Coordination</h3>
+      <p>Managing supplier communication, following up on delays, resolving issues, and keeping your supply chain running without interruption.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📊</div>
+      <h3>Data Entry & Tracking</h3>
+      <p>Building and maintaining spreadsheets, updating trackers, checking for duplicates, and keeping all records accurate and organized.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📋</div>
+      <h3>SOP Execution</h3>
+      <p>Following established processes step by step — consistently and without deviation — so your workflow stays reliable and predictable.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📧</div>
+      <h3>Email & Communication</h3>
+      <p>Handling pre-approved messages, responding to routine inquiries, and flagging anything that needs human review.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔍</div>
+      <h3>Order Status Management</h3>
+      <p>Working with order management apps and dashboards to monitor, update, and report on order statuses in real time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills-section" id="skills">
+  <div class="section-label">Competencies</div>
+  <h2 class="section-title">Skills & Proficiency</h2>
+  <p class="section-desc">Built through daily hands-on work in e-commerce operations.</p>
+  <div class="skills-grid">
+    <div class="skill-item">
+      <div class="skill-name">Google Sheets / Excel</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Order Processing</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Supplier Communication</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Data Entry & Accuracy</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">SOP Execution</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">CSV Management</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Email Management</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Duplicate Checking</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="tools-section" id="tools">
+  <div class="section-label">Tech Stack</div>
+  <h2 class="section-title">Tools I Work With</h2>
+  <p class="section-desc">Platforms and tools I use regularly in day-to-day operations.</p>
+  <div class="tools-grid">
+    <span class="tool-tag">Shopify</span>
+    <span class="tool-tag">Google Sheets</span>
+    <span class="tool-tag">Microsoft Excel</span>
+    <span class="tool-tag">Google Docs</span>
+    <span class="tool-tag">Gmail</span>
+    <span class="tool-tag">Fiverr</span>
+    <span class="tool-tag">Upwork</span>
+    <span class="tool-tag">WhatsApp Business</span>
+    <span class="tool-tag">Order Status Apps</span>
+    <span class="tool-tag">CSV Management</span>
+    <span class="tool-tag">Trello / Notion</span>
+    <span class="tool-tag">Slack</span>
+  </div>
+</section>
+
+<!-- WHY ME -->
+<section class="why-section">
+  <div class="section-label">Why Work With Me</div>
+  <h2 class="section-title">What Sets Me Apart</h2>
+  <p class="section-desc">Not just a task-doer — a reliable operational partner.</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-number">01</div>
+      <h3>Process First</h3>
+      <p>I follow your SOPs exactly as written. No improvising, no shortcuts. Your process stays intact.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-number">02</div>
+      <h3>Accuracy Over Speed</h3>
+      <p>I double-check before I submit. Getting it right the first time saves everyone time.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-number">03</div>
+      <h3>Clear Communication</h3>
+      <p>If something is unclear, I flag it — not guess. You'll always know where things stand.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-number">04</div>
+      <h3>E-commerce Native</h3>
+      <p>I understand how online stores operate. No onboarding from scratch — I get context fast.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-label">Get In Touch</div>
+  <h2 class="section-title">Let's Work Together</h2>
+  <p class="contact-desc">Available for part-time and full-time remote roles. Quick to onboard, easy to work with.</p>
+  <div class="contact-links">
+    <a href="https://fiverr.com/yourusername" class="contact-link" target="_blank">🟢 Fiverr Profile</a>
+    <a href="https://upwork.com/freelancers/yourusername" class="contact-link" target="_blank">🔵 Upwork Profile</a>
+    <a href="mailto:your@email.com" class="contact-link">✉️ Email Me</a>
+    <a href="https://wa.me/923000000000" class="contact-link" target="_blank">💬 WhatsApp</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Your Name — Virtual Assistant & Order Fulfillment Specialist</span>
+  <span>Based in Lahore, Pakistan · Available Worldwide</span>
+</footer>
+
+</body>
+</html>
