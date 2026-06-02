@@ -1,552 +1,748 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="PfdhZ09ql0eRpFytCk1VNeYSg_-ZX00HH__EAVHkkuk" />
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7CPTJH9BFM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7CPTJH9BFM');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio — Virtual Assistant & Order Fulfillment Specialist</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- SEO META TAGS -->
+<title>Virtual Assistant & Order Fulfillment Specialist | E-commerce VA for Hire</title>
+<meta name="description" content="Experienced Virtual Assistant and Order Fulfillment Specialist. I manage Shopify orders, supplier coordination, data entry, Google Sheets tracking, and e-commerce backend operations. Available for hire on Fiverr and Upwork.">
+<meta name="keywords" content="virtual assistant, order fulfillment specialist, ecommerce VA, Shopify order management, supplier coordination, data entry specialist, Google Sheets VA, e-commerce virtual assistant, hire VA Pakistan, remote virtual assistant, order tracking specialist, ecommerce operations">
+<meta name="author" content="Your Name">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yourname.is-a.dev">
+
+<!-- Open Graph (for sharing on LinkedIn, WhatsApp etc) -->
+<meta property="og:title" content="Virtual Assistant & Order Fulfillment Specialist for Hire">
+<meta property="og:description" content="Reliable VA specializing in e-commerce operations, Shopify order management, supplier coordination, and data tracking. Available remotely.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourname.is-a.dev">
+
+<!-- Schema Markup (helps Google understand who you are) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Your Name",
+  "jobTitle": "Virtual Assistant & Order Fulfillment Specialist",
+  "description": "Experienced VA specializing in e-commerce operations, Shopify order management, supplier coordination and data entry.",
+  "url": "https://yourname.is-a.dev",
+  "sameAs": [
+    "https://fiverr.com/yourusername",
+    "https://upwork.com/freelancers/yourusername"
+  ],
+  "knowsAbout": ["Virtual Assistant", "Order Fulfillment", "Shopify", "E-commerce Operations", "Data Entry", "Supplier Coordination", "Google Sheets"]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --navy: #0d1b2a;
-    --navy-mid: #1a2e45;
-    --gold: #c9a84c;
-    --gold-light: #e8c97a;
-    --cream: #f5f0e8;
-    --white: #ffffff;
-    --gray: #8a9ab0;
-    --light-bg: #f9f7f4;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--light-bg);
-    color: var(--navy);
-    overflow-x: hidden;
-  }
-
-  /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: rgba(13,27,42,0.97);
-    backdrop-filter: blur(12px);
-    padding: 18px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(201,168,76,0.2);
-  }
-
-  .nav-logo {
-    font-family: 'Playfair Display', serif;
-    color: var(--gold);
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 36px;
-    list-style: none;
-  }
-
-  .nav-links a {
-    color: rgba(255,255,255,0.75);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    transition: color 0.3s;
-  }
-
-  .nav-links a:hover { color: var(--gold); }
-
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    background: var(--navy);
-    display: flex;
-    align-items: center;
-    padding: 120px 60px 80px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -200px; right: -200px;
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: -100px; left: -100px;
-    width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-
-  .hero-content {
-    max-width: 700px;
-    animation: fadeUp 0.9s ease both;
-  }
-
-  .hero-badge {
-    display: inline-block;
-    background: rgba(201,168,76,0.12);
-    border: 1px solid rgba(201,168,76,0.3);
-    color: var(--gold);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 6px 16px;
-    border-radius: 2px;
-    margin-bottom: 28px;
-  }
-
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(42px, 6vw, 72px);
-    color: var(--white);
-    line-height: 1.1;
-    font-weight: 700;
-    margin-bottom: 12px;
-  }
-
-  .hero h1 span {
-    color: var(--gold);
-  }
-
-  .hero-sub {
-    font-size: 18px;
-    color: rgba(255,255,255,0.55);
-    font-weight: 300;
-    margin-bottom: 32px;
-    line-height: 1.6;
-    max-width: 540px;
-  }
-
-  .hero-desc {
-    font-size: 15px;
-    color: rgba(255,255,255,0.65);
-    line-height: 1.8;
-    max-width: 520px;
-    margin-bottom: 44px;
-  }
-
-  .hero-ctas {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    background: var(--gold);
-    color: var(--navy);
-    padding: 14px 32px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 2px;
-    transition: background 0.3s, transform 0.2s;
-  }
-
-  .btn-primary:hover {
-    background: var(--gold-light);
-    transform: translateY(-2px);
-  }
-
-  .btn-outline {
-    border: 1px solid rgba(255,255,255,0.25);
-    color: rgba(255,255,255,0.8);
-    padding: 14px 32px;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 2px;
-    transition: border-color 0.3s, color 0.3s;
-  }
-
-  .btn-outline:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-  }
-
-  /* STATS BAR */
-  .stats-bar {
-    background: var(--navy-mid);
-    border-top: 1px solid rgba(201,168,76,0.15);
-    border-bottom: 1px solid rgba(201,168,76,0.15);
-    padding: 32px 60px;
-    display: flex;
-    justify-content: center;
-    gap: 80px;
-    flex-wrap: wrap;
-  }
-
-  .stat-item {
-    text-align: center;
-    animation: fadeUp 0.9s ease 0.3s both;
-  }
-
-  .stat-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    color: var(--gold);
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-
-  .stat-label {
-    font-size: 11px;
-    color: rgba(255,255,255,0.45);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-  }
-
-  /* SECTIONS */
-  section {
-    padding: 90px 60px;
-  }
-
-  .section-label {
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 500;
-    margin-bottom: 12px;
-  }
-
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 4vw, 42px);
-    color: var(--navy);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 16px;
-  }
-
-  .section-desc {
-    font-size: 15px;
-    color: #5a6a7a;
-    max-width: 520px;
-    line-height: 1.8;
-    margin-bottom: 56px;
-  }
-
-  /* SERVICES */
-  .services { background: var(--white); }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2px;
-    background: #e8e4de;
-    border: 2px solid #e8e4de;
-  }
-
-  .service-card {
-    background: var(--white);
-    padding: 40px 36px;
-    transition: background 0.3s;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px; height: 0;
-    background: var(--gold);
-    transition: height 0.4s ease;
-  }
-
-  .service-card:hover::before { height: 100%; }
-  .service-card:hover { background: #fdfcfa; }
-
-  .service-icon {
-    width: 44px; height: 44px;
-    background: rgba(201,168,76,0.1);
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-size: 20px;
-  }
-
-  .service-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    color: var(--navy);
-    margin-bottom: 12px;
-    font-weight: 600;
-  }
-
-  .service-card p {
-    font-size: 14px;
-    color: #5a6a7a;
-    line-height: 1.7;
-  }
-
-  /* SKILLS */
-  .skills-section { background: var(--light-bg); }
-
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-  }
-
-  .skill-item {
-    background: var(--white);
-    padding: 20px 24px;
-    border-left: 3px solid var(--gold);
-    border-radius: 0 4px 4px 0;
-  }
-
-  .skill-name {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--navy);
-    margin-bottom: 10px;
-  }
-
-  .skill-bar {
-    height: 3px;
-    background: #e8e4de;
-    border-radius: 2px;
-    overflow: hidden;
-  }
-
-  .skill-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--gold), var(--gold-light));
-    border-radius: 2px;
-    animation: fillBar 1.2s ease both;
-  }
-
-  /* TOOLS */
-  .tools-section { background: var(--navy); }
-  .tools-section .section-title { color: var(--white); }
-  .tools-section .section-desc { color: rgba(255,255,255,0.5); }
-  .tools-section .section-label { color: var(--gold); }
-
-  .tools-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .tool-tag {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(201,168,76,0.2);
-    color: rgba(255,255,255,0.8);
-    padding: 10px 20px;
-    font-size: 13px;
-    font-weight: 400;
-    border-radius: 2px;
-    letter-spacing: 0.3px;
-    transition: border-color 0.3s, color 0.3s;
-  }
-
-  .tool-tag:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-  }
-
-  /* WHY ME */
-  .why-section { background: var(--cream); }
-
-  .why-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 32px;
-  }
-
-  .why-card {
-    padding: 32px;
-    background: var(--white);
-    border-bottom: 3px solid var(--gold);
-  }
-
-  .why-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    color: rgba(201,168,76,0.2);
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 16px;
-  }
-
-  .why-card h3 {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 10px;
-  }
-
-  .why-card p {
-    font-size: 14px;
-    color: #5a6a7a;
-    line-height: 1.7;
-  }
-
-  /* CONTACT */
-  .contact-section {
-    background: var(--navy);
-    text-align: center;
-  }
-
-  .contact-section .section-title { color: var(--white); }
-  .contact-section .section-label { color: var(--gold); }
-
-  .contact-desc {
-    font-size: 16px;
-    color: rgba(255,255,255,0.5);
-    max-width: 480px;
-    margin: 0 auto 44px;
-    line-height: 1.8;
-  }
-
-  .contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .contact-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(201,168,76,0.25);
-    color: rgba(255,255,255,0.75);
-    padding: 14px 28px;
-    font-size: 13px;
-    text-decoration: none;
-    border-radius: 2px;
-    transition: all 0.3s;
-    letter-spacing: 0.5px;
-  }
-
-  .contact-link:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-    background: rgba(201,168,76,0.06);
-  }
-
-  /* FOOTER */
-  footer {
-    background: #080f18;
-    padding: 24px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    border-top: 1px solid rgba(201,168,76,0.1);
-  }
-
-  footer span {
-    font-size: 12px;
-    color: rgba(255,255,255,0.3);
-    letter-spacing: 0.5px;
-  }
-
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes fillBar {
-    from { width: 0; }
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    nav { padding: 16px 24px; }
-    .nav-links { display: none; }
-    .hero { padding: 100px 24px 60px; }
-    section { padding: 60px 24px; }
-    .stats-bar { padding: 28px 24px; gap: 40px; }
-    footer { padding: 20px 24px; }
-  }
+:root {
+  --navy: #0b1623;
+  --navy-2: #152236;
+  --navy-3: #1e3250;
+  --gold: #c8a45a;
+  --gold-light: #e2c07e;
+  --gold-dim: rgba(200,164,90,0.15);
+  --cream: #f7f3ec;
+  --white: #ffffff;
+  --muted: #8090a8;
+  --text: #2a3a4e;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  cursor: none;
+}
+
+/* CUSTOM CURSOR */
+.cursor {
+  width: 8px; height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease;
+  transform: translate(-50%, -50%);
+}
+.cursor-ring {
+  width: 32px; height: 32px;
+  border: 1.5px solid rgba(200,164,90,0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: all 0.1s ease;
+  transform: translate(-50%, -50%);
+}
+
+/* FLOATING BADGE */
+.availability-badge {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  z-index: 200;
+  background: var(--navy);
+  border: 1px solid rgba(200,164,90,0.35);
+  border-radius: 100px;
+  padding: 8px 16px 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  animation: badgeDrop 0.8s cubic-bezier(0.34,1.56,0.64,1) 1s both;
+}
+.badge-dot {
+  width: 8px; height: 8px;
+  background: #4ade80;
+  border-radius: 50%;
+  animation: pulse-green 2s infinite;
+}
+.badge-text {
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+@keyframes badgeDrop {
+  from { opacity:0; transform: translateY(-20px); }
+  to { opacity:1; transform: translateY(0); }
+}
+@keyframes pulse-green {
+  0%,100% { box-shadow: 0 0 0 0 rgba(74,222,128,0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(74,222,128,0); }
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 28px;
+  z-index: 200;
+  width: 56px; height: 56px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+  text-decoration: none;
+  animation: floatUp 0.6s ease 1.5s both;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 32px rgba(37,211,102,0.5);
+}
+.whatsapp-btn svg { width:28px; height:28px; fill:white; }
+.whatsapp-popup {
+  position: fixed;
+  bottom: 100px;
+  right: 28px;
+  z-index: 199;
+  background: var(--navy);
+  border: 1px solid rgba(200,164,90,0.25);
+  border-radius: 12px 12px 4px 12px;
+  padding: 16px 20px;
+  max-width: 240px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  display: none;
+  animation: popIn 0.3s ease;
+}
+.whatsapp-popup.show { display: block; }
+.whatsapp-popup p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.whatsapp-popup a {
+  display: block;
+  background: #25d366;
+  color: white;
+  text-align: center;
+  padding: 9px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+@keyframes popIn {
+  from { opacity:0; transform: scale(0.9) translateY(10px); }
+  to { opacity:1; transform: scale(1) translateY(0); }
+}
+@keyframes floatUp {
+  from { opacity:0; transform: translateY(20px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top:0; left:0; right:0;
+  z-index: 100;
+  background: rgba(11,22,35,0.96);
+  backdrop-filter: blur(16px);
+  padding: 16px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(200,164,90,0.12);
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--gold);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.nav-links { display:flex; gap:32px; list-style:none; }
+.nav-links a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-cta {
+  background: var(--gold);
+  color: var(--navy) !important;
+  padding: 8px 20px;
+  border-radius: 2px;
+  font-weight: 600 !important;
+}
+.nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  padding: 120px 60px 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(200,164,90,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,164,90,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-glow {
+  position: absolute;
+  top: 10%; right: 5%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(200,164,90,0.07) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero-glow-2 {
+  position: absolute;
+  bottom: 0; left: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(200,164,90,0.04) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero-content {
+  max-width: 680px;
+  position: relative;
+  z-index: 2;
+}
+.hero-badge-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(200,164,90,0.1);
+  border: 1px solid rgba(200,164,90,0.25);
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 7px 16px;
+  border-radius: 2px;
+  margin-bottom: 28px;
+  animation: fadeUp 0.7s ease both;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(44px, 6vw, 76px);
+  color: var(--white);
+  line-height: 1.08;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: fadeUp 0.7s ease 0.1s both;
+}
+.hero h1 .gold { color: var(--gold); }
+.hero h1 .typed-line {
+  display: block;
+  min-height: 1.1em;
+}
+#typed-text { color: var(--gold); }
+.cursor-blink {
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  background: var(--gold);
+  margin-left: 3px;
+  vertical-align: middle;
+  animation: blink 0.9s step-end infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+.hero-desc {
+  font-size: 16px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.8;
+  max-width: 500px;
+  margin-bottom: 40px;
+  animation: fadeUp 0.7s ease 0.2s both;
+}
+.hero-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.7s ease 0.3s both;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 14px 32px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.7);
+  padding: 14px 32px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+/* STATS */
+.stats-bar {
+  background: var(--navy-2);
+  border-top: 1px solid rgba(200,164,90,0.12);
+  border-bottom: 1px solid rgba(200,164,90,0.12);
+  padding: 28px 60px;
+  display: flex;
+  justify-content: center;
+  gap: 72px;
+  flex-wrap: wrap;
+}
+.stat-item { text-align:center; }
+.stat-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  color: var(--gold);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.stat-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* SECTIONS */
+section { padding: 88px 60px; }
+.section-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 4vw, 46px);
+  color: var(--navy);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+.section-desc {
+  font-size: 15px;
+  color: #6a7d94;
+  max-width: 500px;
+  line-height: 1.8;
+  margin-bottom: 52px;
+}
+
+/* SERVICES */
+.services { background: var(--white); }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: #ddd8cf;
+}
+.service-card {
+  background: var(--white);
+  padding: 38px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: left;
+}
+.service-card:hover::after { transform: scaleX(1); }
+.service-card:hover { background: #fdfcf9; }
+.service-icon {
+  font-size: 28px;
+  margin-bottom: 18px;
+  display: block;
+}
+.service-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: var(--navy);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.service-card p { font-size: 14px; color: #6a7d94; line-height: 1.7; }
+
+/* SKILLS */
+.skills-section { background: var(--cream); }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+.skill-item {
+  background: var(--white);
+  padding: 18px 22px;
+  border-left: 3px solid var(--gold);
+}
+.skill-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.skill-bar {
+  height: 3px;
+  background: #e5e0d8;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  border-radius: 2px;
+  width: 0;
+  transition: width 1.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* TOOLS */
+.tools-section { background: var(--navy); }
+.tools-section .section-title { color: var(--white); }
+.tools-section .section-desc { color: rgba(255,255,255,0.45); }
+.tools-grid { display:flex; flex-wrap:wrap; gap:10px; }
+.tool-tag {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(200,164,90,0.2);
+  color: rgba(255,255,255,0.75);
+  padding: 9px 18px;
+  font-size: 13px;
+  border-radius: 2px;
+  transition: all 0.3s;
+  cursor: default;
+}
+.tool-tag:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); }
+
+/* WHY ME */
+.why-section { background: var(--navy-2); }
+.why-section .section-title { color: var(--white); }
+.why-section .section-desc { color: rgba(255,255,255,0.45); }
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+.why-card {
+  padding: 32px 28px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(200,164,90,0.12);
+  border-radius: 2px;
+  transition: border-color 0.3s, background 0.3s;
+}
+.why-card:hover { border-color: rgba(200,164,90,0.35); background: rgba(200,164,90,0.04); }
+.why-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  color: rgba(200,164,90,0.18);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.why-card h3 { font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 10px; }
+.why-card p { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.7; }
+
+/* CONTACT FORM */
+.contact-section { background: var(--cream); }
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.contact-info h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--navy);
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+.contact-info p {
+  font-size: 15px;
+  color: #6a7d94;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+.contact-links-list { display:flex; flex-direction:column; gap:12px; }
+.contact-link-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 16px;
+  background: var(--white);
+  border-left: 3px solid var(--gold);
+  transition: background 0.3s, transform 0.2s;
+}
+.contact-link-item:hover { background: #fdfcf9; transform: translateX(4px); }
+.contact-link-item span { font-size: 18px; }
+
+/* FORM */
+.hire-form {
+  background: var(--white);
+  padding: 40px 36px;
+  border-top: 3px solid var(--gold);
+}
+.hire-form h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  color: var(--navy);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.form-group { margin-bottom: 18px; }
+.form-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 7px;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd8cf;
+  border-radius: 2px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--navy);
+  background: var(--cream);
+  outline: none;
+  transition: border-color 0.3s;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus { border-color: var(--gold); background: var(--white); }
+.form-group textarea { resize: vertical; min-height: 110px; }
+.form-submit {
+  width: 100%;
+  background: var(--navy);
+  color: var(--gold);
+  border: none;
+  padding: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+.form-submit:hover { background: var(--navy-3); transform: translateY(-1px); }
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 24px;
+  color: var(--navy);
+}
+.form-success .check { font-size: 40px; margin-bottom: 12px; }
+.form-success p { font-size: 15px; color: #6a7d94; }
+
+/* FOOTER */
+footer {
+  background: #060d16;
+  padding: 22px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: 1px solid rgba(200,164,90,0.08);
+}
+footer span { font-size: 12px; color: rgba(255,255,255,0.25); letter-spacing: 0.3px; }
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(22px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-wrap { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 768px) {
+  nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 100px 20px 60px; }
+  section { padding: 60px 20px; }
+  .stats-bar { padding: 24px 20px; gap: 36px; }
+  footer { padding: 18px 20px; }
+  .availability-badge { top: 70px; right: 12px; }
+  .hire-form { padding: 28px 20px; }
+}
 </style>
 </head>
 <body>
 
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- FLOATING AVAILABILITY BADGE -->
+<div class="availability-badge">
+  <div class="badge-dot"></div>
+  <span class="badge-text">Available for Hire</span>
+</div>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/923000000000" class="whatsapp-btn" target="_blank" id="waBtn" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+<div class="whatsapp-popup" id="waPopup">
+  <p>👋 Hey! Need a reliable VA or order fulfillment specialist? Let's talk.</p>
+  <a href="https://wa.me/923000000000?text=Hi,%20I%20found%20your%20portfolio%20and%20I'm%20interested%20in%20hiring%20you." target="_blank">Start Chat →</a>
+</div>
+
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">Eshban Ayub</div>
+  <div class="nav-logo">YourName</div>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#tools">Tools</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
   <div class="hero-content">
-    <div class="hero-badge">Available for Hire · Remote</div>
-    <h1>Virtual Assistant &<br><span>Order Fulfillment</span><br>Specialist</h1>
-    <p class="hero-sub">Reliable. Accurate. Process-driven.</p>
-    <p class="hero-desc">I help e-commerce businesses run smoothly — from order tracking and supplier coordination to data management and backend operations. I follow your SOPs, keep your records clean, and make sure nothing slips through the cracks.</p>
+    <div class="hero-badge-inline">
+      <span>⚡</span> Remote · Available Now
+    </div>
+    <h1>
+      Your Reliable<br>
+      <span class="typed-line"><span id="typed-text"></span><span class="cursor-blink"></span></span>
+      <span class="gold">Specialist</span>
+    </h1>
+    <p class="hero-desc">
+      I keep your e-commerce operations running smoothly — from Shopify order management and supplier coordination to data tracking and backend VA work. Accurate, process-driven, and dependable.
+    </p>
     <div class="hero-ctas">
-      <a href="#contact" class="btn-primary">Hire Me</a>
-      <a href="#services" class="btn-outline">View Services</a>
+      <a href="#contact" class="btn-primary">Hire Me Now</a>
+      <a href="#services" class="btn-outline">See My Services</a>
     </div>
   </div>
 </section>
 
 <!-- STATS -->
 <div class="stats-bar">
-  <div class="stat-item">
+  <div class="stat-item reveal">
     <div class="stat-number">3+</div>
     <div class="stat-label">Years Experience</div>
   </div>
-  <div class="stat-item">
+  <div class="stat-item reveal">
     <div class="stat-number">100%</div>
     <div class="stat-label">SOP Compliant</div>
   </div>
-  <div class="stat-item">
+  <div class="stat-item reveal">
     <div class="stat-number">E-com</div>
     <div class="stat-label">Industry Focus</div>
   </div>
-  <div class="stat-item">
+  <div class="stat-item reveal">
     <div class="stat-number">Remote</div>
     <div class="stat-label">Work Setup</div>
   </div>
@@ -554,37 +750,37 @@
 
 <!-- SERVICES -->
 <section class="services" id="services">
-  <div class="section-label">What I Do</div>
-  <h2 class="section-title">Core Services</h2>
-  <p class="section-desc">End-to-end operational support for e-commerce stores and online businesses.</p>
+  <div class="section-label reveal">What I Do</div>
+  <h2 class="section-title reveal">Core Services</h2>
+  <p class="section-desc reveal">End-to-end operational support for e-commerce stores and online businesses.</p>
   <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">📦</div>
+    <div class="service-card reveal">
+      <span class="service-icon">📦</span>
       <h3>Order Fulfillment</h3>
-      <p>Processing orders, tracking shipments, updating statuses, and ensuring every order is fulfilled accurately and on time.</p>
+      <p>Processing orders, tracking shipments, updating statuses, and ensuring every order moves accurately from placement to delivery.</p>
     </div>
-    <div class="service-card">
-      <div class="service-icon">🤝</div>
+    <div class="service-card reveal">
+      <span class="service-icon">🤝</span>
       <h3>Supplier Coordination</h3>
-      <p>Managing supplier communication, following up on delays, resolving issues, and keeping your supply chain running without interruption.</p>
+      <p>Managing supplier communication, chasing delays, resolving issues, and keeping your supply chain running without interruption.</p>
     </div>
-    <div class="service-card">
-      <div class="service-icon">📊</div>
+    <div class="service-card reveal">
+      <span class="service-icon">📊</span>
       <h3>Data Entry & Tracking</h3>
       <p>Building and maintaining spreadsheets, updating trackers, checking for duplicates, and keeping all records accurate and organized.</p>
     </div>
-    <div class="service-card">
-      <div class="service-icon">📋</div>
+    <div class="service-card reveal">
+      <span class="service-icon">📋</span>
       <h3>SOP Execution</h3>
-      <p>Following established processes step by step — consistently and without deviation — so your workflow stays reliable and predictable.</p>
+      <p>Following established processes step-by-step — consistently and without deviation — so your workflow stays predictable and reliable.</p>
     </div>
-    <div class="service-card">
-      <div class="service-icon">📧</div>
+    <div class="service-card reveal">
+      <span class="service-icon">📧</span>
       <h3>Email & Communication</h3>
-      <p>Handling pre-approved messages, responding to routine inquiries, and flagging anything that needs human review.</p>
+      <p>Handling pre-approved messages, responding to routine inquiries, and flagging anything that needs your direct attention.</p>
     </div>
-    <div class="service-card">
-      <div class="service-icon">🔍</div>
+    <div class="service-card reveal">
+      <span class="service-icon">🔍</span>
       <h3>Order Status Management</h3>
       <p>Working with order management apps and dashboards to monitor, update, and report on order statuses in real time.</p>
     </div>
@@ -593,113 +789,213 @@
 
 <!-- SKILLS -->
 <section class="skills-section" id="skills">
-  <div class="section-label">Competencies</div>
-  <h2 class="section-title">Skills & Proficiency</h2>
-  <p class="section-desc">Built through daily hands-on work in e-commerce operations.</p>
+  <div class="section-label reveal">Competencies</div>
+  <h2 class="section-title reveal">Skills & Proficiency</h2>
+  <p class="section-desc reveal">Built through daily hands-on work in e-commerce operations.</p>
   <div class="skills-grid">
-    <div class="skill-item">
-      <div class="skill-name">Google Sheets / Excel</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Order Processing</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Supplier Communication</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Data Entry & Accuracy</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">SOP Execution</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">CSV Management</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Email Management</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-    </div>
-    <div class="skill-item">
-      <div class="skill-name">Duplicate Checking</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-    </div>
+    <div class="skill-item reveal"><div class="skill-name">Google Sheets / Excel</div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
+    <div class="skill-item reveal"><div class="skill-name">Order Processing</div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
+    <div class="skill-item reveal"><div class="skill-name">Supplier Communication</div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+    <div class="skill-item reveal"><div class="skill-name">Data Entry & Accuracy</div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
+    <div class="skill-item reveal"><div class="skill-name">SOP Execution</div><div class="skill-bar"><div class="skill-fill" data-width="100"></div></div></div>
+    <div class="skill-item reveal"><div class="skill-name">CSV Management</div><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+    <div class="skill-item reveal"><div class="skill-name">Email Management</div><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+    <div class="skill-item reveal"><div class="skill-name">Duplicate Checking</div><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
   </div>
 </section>
 
 <!-- TOOLS -->
 <section class="tools-section" id="tools">
-  <div class="section-label">Tech Stack</div>
-  <h2 class="section-title">Tools I Work With</h2>
-  <p class="section-desc">Platforms and tools I use regularly in day-to-day operations.</p>
+  <div class="section-label reveal">Tech Stack</div>
+  <h2 class="section-title reveal">Tools I Work With</h2>
+  <p class="section-desc reveal">Platforms I use daily in e-commerce and VA operations.</p>
   <div class="tools-grid">
-    <span class="tool-tag">Shopify</span>
-    <span class="tool-tag">Google Sheets</span>
-    <span class="tool-tag">Microsoft Excel</span>
-    <span class="tool-tag">Google Docs</span>
-    <span class="tool-tag">Gmail</span>
-    <span class="tool-tag">Fiverr</span>
-    <span class="tool-tag">Upwork</span>
-    <span class="tool-tag">WhatsApp Business</span>
-    <span class="tool-tag">Order Status Apps</span>
-    <span class="tool-tag">CSV Management</span>
-    <span class="tool-tag">Trello / Notion</span>
-    <span class="tool-tag">Slack</span>
+    <span class="tool-tag reveal">Shopify</span>
+    <span class="tool-tag reveal">Google Sheets</span>
+    <span class="tool-tag reveal">Microsoft Excel</span>
+    <span class="tool-tag reveal">Google Docs</span>
+    <span class="tool-tag reveal">Gmail</span>
+    <span class="tool-tag reveal">Fiverr</span>
+    <span class="tool-tag reveal">Upwork</span>
+    <span class="tool-tag reveal">WhatsApp Business</span>
+    <span class="tool-tag reveal">Order Status Apps</span>
+    <span class="tool-tag reveal">CSV Management</span>
+    <span class="tool-tag reveal">Trello / Notion</span>
+    <span class="tool-tag reveal">Slack</span>
   </div>
 </section>
 
 <!-- WHY ME -->
 <section class="why-section">
-  <div class="section-label">Why Work With Me</div>
-  <h2 class="section-title">What Sets Me Apart</h2>
-  <p class="section-desc">Not just a task-doer — a reliable operational partner.</p>
+  <div class="section-label reveal">Why Work With Me</div>
+  <h2 class="section-title reveal">What Sets Me Apart</h2>
+  <p class="section-desc reveal">Not just a task-doer — a reliable operational partner.</p>
   <div class="why-grid">
-    <div class="why-card">
+    <div class="why-card reveal">
       <div class="why-number">01</div>
       <h3>Process First</h3>
       <p>I follow your SOPs exactly as written. No improvising, no shortcuts. Your process stays intact.</p>
     </div>
-    <div class="why-card">
+    <div class="why-card reveal">
       <div class="why-number">02</div>
       <h3>Accuracy Over Speed</h3>
       <p>I double-check before I submit. Getting it right the first time saves everyone time.</p>
     </div>
-    <div class="why-card">
+    <div class="why-card reveal">
       <div class="why-number">03</div>
       <h3>Clear Communication</h3>
       <p>If something is unclear, I flag it — not guess. You'll always know where things stand.</p>
     </div>
-    <div class="why-card">
+    <div class="why-card reveal">
       <div class="why-number">04</div>
       <h3>E-commerce Native</h3>
-      <p>I understand how online stores operate. No onboarding from scratch — I get context fast.</p>
+      <p>I understand how online stores operate. No lengthy onboarding — I get context fast.</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
-  <div class="section-label">Get In Touch</div>
-  <h2 class="section-title">Let's Work Together</h2>
-  <p class="contact-desc">Available for part-time and full-time remote roles. Quick to onboard, easy to work with.</p>
-  <div class="contact-links">
-    <a href="https://fiverr.com/yourusername" class="contact-link" target="_blank">🟢 Fiverr Profile</a>
-    <a href="https://upwork.com/freelancers/yourusername" class="contact-link" target="_blank">🔵 Upwork Profile</a>
-    <a href="mailto:web4.lad@gmail.com" class="contact-link">✉️ Email Me</a>
-    <a href="https://wa.me/923164272141" class="contact-link" target="_blank">💬 WhatsApp</a>
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <div class="section-label reveal">Get In Touch</div>
+      <h2 class="reveal">Let's Work<br>Together</h2>
+      <p class="reveal">Available for part-time and full-time remote roles. Quick to onboard, process-oriented, and easy to work with.</p>
+      <div class="contact-links-list reveal">
+        <a href="https://fiverr.com/yourusername" class="contact-link-item" target="_blank">
+          <span>🟢</span> Fiverr Profile
+        </a>
+        <a href="https://upwork.com/freelancers/yourusername" class="contact-link-item" target="_blank">
+          <span>🔵</span> Upwork Profile
+        </a>
+        <a href="mailto:your@email.com" class="contact-link-item">
+          <span>✉️</span> your@email.com
+        </a>
+        <a href="https://wa.me/923000000000" class="contact-link-item" target="_blank">
+          <span>💬</span> WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="hire-form reveal">
+      <h3>Send a Message</h3>
+      <div id="formWrap">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="fname" placeholder="John Smith">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="femail" placeholder="john@company.com">
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select id="fservice">
+            <option value="">Select a service...</option>
+            <option>Order Fulfillment</option>
+            <option>Supplier Coordination</option>
+            <option>Data Entry & Tracking</option>
+            <option>SOP Execution</option>
+            <option>Email Management</option>
+            <option>General VA Work</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="fmessage" placeholder="Tell me about your project or requirements..."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm()">Send Message</button>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="check">✅</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--navy);margin-bottom:8px;">Message Sent!</h3>
+        <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <span>© 2026 Eshban Ayub - Virtual Assistant & Order Fulfillment Specialist</span>
+  <span>© 2026 Your Name — Virtual Assistant & Order Fulfillment Specialist</span>
   <span>Based in Lahore, Pakistan · Available Worldwide</span>
 </footer>
 
+<script>
+// CUSTOM CURSOR
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  cursor.style.left = mx+'px';
+  cursor.style.top = my+'px';
+});
+function animateRing(){
+  rx += (mx-rx)*0.12;
+  ry += (my-ry)*0.12;
+  ring.style.left = rx+'px';
+  ring.style.top = ry+'px';
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+document.querySelectorAll('a,button,.tool-tag').forEach(el => {
+  el.addEventListener('mouseenter', () => { cursor.style.transform='translate(-50%,-50%) scale(2)'; ring.style.transform='translate(-50%,-50%) scale(1.5)'; });
+  el.addEventListener('mouseleave', () => { cursor.style.transform='translate(-50%,-50%) scale(1)'; ring.style.transform='translate(-50%,-50%) scale(1)'; });
+});
+
+// TYPING ANIMATION
+const roles = ['Virtual Assistant','Order Fulfillment','E-commerce VA','Shopify Operations','Data Entry'];
+let ri=0, ci=0, deleting=false;
+function type(){
+  const word = roles[ri];
+  if(!deleting){
+    document.getElementById('typed-text').textContent = word.substring(0,ci+1);
+    ci++;
+    if(ci===word.length){ deleting=true; setTimeout(type,1800); return; }
+  } else {
+    document.getElementById('typed-text').textContent = word.substring(0,ci-1);
+    ci--;
+    if(ci===0){ deleting=false; ri=(ri+1)%roles.length; }
+  }
+  setTimeout(type, deleting?60:90);
+}
+type();
+
+// WHATSAPP POPUP
+const waBtn = document.getElementById('waBtn');
+const waPopup = document.getElementById('waPopup');
+let popupShown = false;
+setTimeout(()=>{ if(!popupShown){ waPopup.classList.add('show'); popupShown=true; setTimeout(()=>waPopup.classList.remove('show'),5000); } }, 4000);
+waBtn.addEventListener('click', e => {
+  e.preventDefault();
+  waPopup.classList.toggle('show');
+});
+document.addEventListener('click', e => {
+  if(!waBtn.contains(e.target)&&!waPopup.contains(e.target)) waPopup.classList.remove('show');
+});
+
+// SCROLL REVEAL
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      // animate skill bars
+      const fill = e.target.querySelector('.skill-fill');
+      if(fill) fill.style.width = fill.dataset.width + '%';
+    }
+  });
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// FORM SUBMIT
+function submitForm(){
+  const n=document.getElementById('fname').value;
+  const e=document.getElementById('femail').value;
+  const m=document.getElementById('fmessage').value;
+  if(!n||!e||!m){ alert('Please fill in your name, email, and message.'); return; }
+  document.getElementById('formWrap').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+}
+</script>
 </body>
 </html>
