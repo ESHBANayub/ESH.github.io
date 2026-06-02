@@ -998,13 +998,38 @@ const observer = new IntersectionObserver(entries=>{
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 // FORM SUBMIT
-function submitForm(){
+async function submitForm(){
   const n=document.getElementById('fname').value;
   const e=document.getElementById('femail').value;
+  const s=document.getElementById('fservice').value;
   const m=document.getElementById('fmessage').value;
   if(!n||!e||!m){ alert('Please fill in your name, email, and message.'); return; }
-  document.getElementById('formWrap').style.display='none';
-  document.getElementById('formSuccess').style.display='block';
+
+  const btn = document.querySelector('.form-submit');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  const res = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({
+      access_key: 'dbb5afbd-51c3-441d-a563-7ee3bb69df65',
+      name: n,
+      email: e,
+      service: s,
+      message: m
+    })
+  });
+
+  const data = await res.json();
+  if(data.success){
+    document.getElementById('formWrap').style.display='none';
+    document.getElementById('formSuccess').style.display='block';
+  } else {
+    alert('Something went wrong. Please try WhatsApp instead.');
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
+  }
 }
 </script>
 </body>
